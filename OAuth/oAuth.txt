@@ -1,0 +1,32 @@
+Services
+	Service to get access(Want a resource)
+	Authorization server(gives authorization)
+	Resource Server(client want to use)
+
+ClientId - identifyi the user
+Client secret - only authorization server knows
+Authorization code - temp code auth server send to client
+Access token - key client will use to communicate to resource server
+
+client - authorizaztion server (clientId, scope) - grand access - send authorization code to client - send clientId, secretId and authorization code - send access token to client - if valid send resource to client
+
+
+go mod init aAuth/felix
+
+go mod tidy
+
+http://localhost:8080/credentials
+http://localhost:8080/token?grant_type=client_credentials&client_id=bc166383&client_secret=644d2c37&scope=all
+http://localhost:8080/protected?access_token=YLAKSA0QP8GETH8MMJAZ0Q
+http://localhost:8080/test
+{
+"CLIENT_ID": "9a65e6da",
+"CLIENT_SECRET": "8986aadb"
+}
+
+{
+"access_token": "90NDSIOLMGS7A2MNO_X4RW",
+"expires_in": 7200,
+"scope": "all",
+"token_type": "Bearer"
+}
